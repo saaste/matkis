@@ -1,0 +1,147 @@
+@content-text-color: #5e6572;
+@link-color: #a9b4c2;
+@sidebar-background: #1c2321;
+@some-light-color: #a9b4c2;
+
+[class^="pure-u"] > div {
+    padding: 1em;
+}
+
+#app {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #2c3e50;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px dotted @link-color;
+    color: @link-color;
+}
+
+#sidebar {
+    background: @sidebar-background;
+    color: @content-text-color;
+    min-height: 100vh;
+
+    .diary-navigation {
+
+        font-weight: bold;
+
+        a {
+            border-bottom: none;
+        }
+
+        .albums {
+            text-align: center;
+        }
+    
+        .next-day {
+            text-align: right;
+        }
+
+        .next-day span, .previous-day span {
+            color: lighten(@sidebar-background, 15%);
+        }
+    }
+
+    .pure-menu-link {
+        background: transparent;
+        border-bottom: none;
+    }
+
+    .pure-menu-link:hover {
+        background: lighten(@sidebar-background, 5%);
+    }
+
+    .router-link-exact-active {
+        font-weight: bold;
+    }
+
+    .timezone-selection {
+        font-size: 0.8em;
+        position: fixed;
+        bottom: 1em;
+    }
+}
+
+#content {
+    color: @content-text-color;
+
+    .local-time {
+        font-size: 0.6em;
+
+    }
+
+    .formatted {
+        white-space: pre-wrap;
+    }
+
+    .entry {
+        border-bottom: 1px solid @some-light-color;
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: #eee;
+            
+                .photo {
+                    display: inline-block; // TODO: Fix
+                    width: 200px;
+                }
+        }
+
+    }
+
+
+
+    .comment-reply {
+        padding-left: 2em;
+    }
+}
+
+.spacer {
+    margin: 1em;
+}
+
+.navi-newer {
+    text-align: right;
+}
+
+#album {
+    padding-left: 1em;
+    padding-right: 1em;
+
+    .country-albums {
+        display: flex;
+        flex-wrap: wrap;
+                
+        .country-album {
+            display: grid;
+            grid-template-rows: 1fr min-content;
+            
+            width: 240px;
+            border: 1px solid #aaa;
+            margin-right: 1em;
+            margin-bottom: 1em;
+            background: #ccc;
+            
+            .photo {
+                margin: 0.8em auto;
+
+                img {
+                    padding: 0.8em;
+                    background: white;
+                    border: 1px solid #aaa;
+                }
+            }
+
+            .description {
+                padding: 0.5em;
+                text-align: center;
+            }
+
+        }
+    }
+}

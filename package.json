@@ -1,0 +1,32 @@
+{
+  "name": "vue-single-file-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "postcss": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve-prod": "http-server ./dist",
+    "serve": "VUE_APP_API_ROOT='http://localhost:3000/' vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "mock-api": "./node_modules/.bin/json-server --watch ./dev/json-server-data.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vue/cli-service": "^4.1.1",
+    "json-server": "^0.15.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.2.0",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "vue": "^2.6.10",
+    "vue-moment": "^4.0.0",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.1.3"
+  }
+}
